@@ -9,7 +9,7 @@ export const jwtGenerate = (id: string = ""): Promise<string> => {
             payload,
             process.env.JWTPASS as string,
             {
-                expiresIn: "1h"
+                expiresIn: "30d"
             },
             (err: Error | null, token: string | undefined) => {
                 if (err) {
