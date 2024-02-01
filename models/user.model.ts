@@ -6,7 +6,6 @@ export interface UserInterface {
     password: string;
     code?: string;
     verified?: boolean;
-    token: string
 };
 
 const UserSchema = new Schema<UserInterface>({
@@ -29,10 +28,6 @@ const UserSchema = new Schema<UserInterface>({
         type: Boolean,
         default: false
     },
-    token: {
-        type: String
-    }
-
 });
 
 UserSchema.methods.toJSON = function() {
