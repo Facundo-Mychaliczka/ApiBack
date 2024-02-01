@@ -6,6 +6,7 @@ export interface UserInterface {
     password: string;
     code?: string;
     verified?: boolean;
+    token: string
 };
 
 const UserSchema = new Schema<UserInterface>({
@@ -27,6 +28,9 @@ const UserSchema = new Schema<UserInterface>({
     verified: {
         type: Boolean,
         default: false
+    },
+    token: {
+        type: String
     }
 
 });

@@ -51,9 +51,13 @@ export const login = async (req: Request, res: Response): Promise<void> => {
 
         const token = await jwtGenerate(user.id)
 
+        await User.findOneAndUpdate(
+            {email},
+            {token: token}
+        );
+
         res.status(202).json({
             user,
-            token
         });
         
     } catch (error) {
