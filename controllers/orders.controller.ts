@@ -20,7 +20,12 @@ export const getOrders = async (req: Request, res: Response) => {
 
 export const createOrder = async (req: Request, res: Response) => {
 
+    // EL TOKEN SE PASA COMO HEADER
+
     const userId: ObjectId = req.body.userConfirmed._id
+
+    console.log(req.body.userConfirmed._id);
+    
 
     const orderData: OrderInterface = req.body
 

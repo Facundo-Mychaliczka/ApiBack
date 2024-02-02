@@ -97,7 +97,8 @@ export const verifyUser = async (req: Request, res: Response) => {
         );
 
         res.status(200).json({
-            msg: "Usuario verificado correctamente."
+            msg: "Usuario verificado correctamente.",
+            verified: true
         })
         
     } catch (error) {
