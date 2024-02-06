@@ -80,7 +80,7 @@ export const verifyUser = async (req: Request, res: Response) => {
         }
         if (user.verified) {
             res.status(400).json({
-                msg: "Usuario ya verificado."
+                msg: "Usuario ya verificado, por favor, vuelva a iniciar sesión para acceder a las características de verificados"
             })
             return;
         }
@@ -97,7 +97,7 @@ export const verifyUser = async (req: Request, res: Response) => {
         );
         
         res.status(200).json({
-            msg: "Usuario verificado correctamente.",
+            msg: "Usuario verificado correctamente, por favor, vuelva a iniciar sesión para acceder a las características de verificados.",
         })
         
     } catch (error) {
