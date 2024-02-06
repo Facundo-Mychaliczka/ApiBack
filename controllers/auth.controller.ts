@@ -95,10 +95,11 @@ export const verifyUser = async (req: Request, res: Response) => {
             {email},
             {verified: true}
         );
+        
 
         res.status(200).json({
             msg: "Usuario verificado correctamente.",
-            user
+            verified: true
         })
         
     } catch (error) {
