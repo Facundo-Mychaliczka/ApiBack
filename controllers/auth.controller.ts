@@ -91,14 +91,14 @@ export const verifyUser = async (req: Request, res: Response) => {
             return
         }
 
-        await User.findOneAndUpdate(
+       const verifiedUser = await User.findOneAndUpdate(
             {email},
             {verified: true}
         );
 
         res.status(200).json({
             msg: "Usuario verificado correctamente.",
-            verified: true
+            verifiedUser
         })
         
     } catch (error) {

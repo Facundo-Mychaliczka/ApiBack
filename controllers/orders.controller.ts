@@ -24,9 +24,6 @@ export const createOrder = async (req: Request, res: Response) => {
 
     const userId: ObjectId = req.body.userConfirmed._id
 
-    console.log(req.body.userConfirmed._id);
-    
-
     const orderData: OrderInterface = req.body
 
 
