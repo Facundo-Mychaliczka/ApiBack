@@ -5,7 +5,7 @@ interface ItemInterface {
     name: string;
     id: Number;
     value: Number;
-    img: string
+    image: string
     garantía: string,
     quantity: number
 }
@@ -59,7 +59,7 @@ const OrderSchema = new Schema<OrderInterface>({
                 type: String,
                 required: true
             },
-            img: {
+            image: {
                 type: String,
                 required: true
             },
