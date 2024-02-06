@@ -5,9 +5,9 @@ interface ItemInterface {
     name: string;
     id: Number;
     value: Number;
-    category: string;
     img: string
-    garantía: string
+    garantía: string,
+    quantity: number
 }
 export interface ShippingDetailsInterface {
 	name: string;
@@ -55,10 +55,6 @@ const OrderSchema = new Schema<OrderInterface>({
                 type: Number,
                 required: true
             },
-            category: {
-                type: String,
-                required: true
-            },
             garantía: {
                 type: String,
                 required: true
@@ -67,6 +63,10 @@ const OrderSchema = new Schema<OrderInterface>({
                 type: String,
                 required: true
             },
+            quantity: {
+                type: Number,
+                required: true
+            }
         }],
         required: true
     },
